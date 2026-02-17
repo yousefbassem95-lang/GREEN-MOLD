@@ -1,6 +1,8 @@
-# 🦠 Green Mold Cure - Ultimate Edition
-
 <div align="center">
+
+![Green Mold Cure Banner](assets/green_mold_banner.png)
+
+# 🦠 Green Mold Cure - Ultimate Edition
 
 **The World's First Open-Source Antivirus with Local AI Threat Correlation**
 
@@ -19,7 +21,7 @@
 This project, **Green Mold Cure**, is a significant contribution to the 'Elixirs and Cures' initiative.
 
 - **Your GitHub Profile:** [Yousef Bassem](https://github.com/yousefbassem95-lang)
-- **Project Repository:** [GREEN-MOLD](https://github.com/yousefbassem95-lang/GREEN-MOLD)
+- 🦠 [Green Mold Cure](https://github.com/yousefbassem95-lang/GREEN-MOLD) - **Status:** Active
 
 ---
 
