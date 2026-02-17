@@ -1,4 +1,5 @@
 # 🦠 Green Mold Cure - Ultimate Edition
+<img width="513" height="719" alt="Screenshot from 2026-02-17 21-42-05" src="https://github.com/user-attachments/assets/dbef700c-de92-4a2c-a4a0-32cca493ac0d" />
 
 <div align="center">
 
