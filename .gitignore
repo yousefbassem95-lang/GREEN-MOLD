@@ -1,322 +1,39 @@
-# =============================================================================
-# Green Mold Cure - Git Ignore File
-# Comprehensive security-focused .gitignore for GitHub
-# =============================================================================
+# --- THE ARCHITECT'S INVISIBILITY CLOAK (GITIGNORE) ---
+# Owner: Youssef Bassem (JUPITER)
 
-# -----------------------------------------------------------------------------
-# SECURITY - Never commit these files
-# -----------------------------------------------------------------------------
-
-# Environment variables (MAY CONTAIN API KEYS)
+# 1. THE FORBIDDEN (Secrets & Keys)
 .env
 .env.local
-.env.*.local
-.env.production
-.env.development
-
-# API key files
-*_api_key.txt
-*_apikey.txt
-*.key
 *.pem
-*.crt
+*.key
+*.asc
+.gnupg/
+gpg_batch
+gpg_update
 
-# Secret files
-secrets/
-secrets.json
-secrets.yaml
-secrets.yml
+# 2. THE WATCHDOG (Internal Security Data)
+.watchdog_db.json
 
-# Credential files
-credentials
-credentials.json
-credentials.yaml
-credentials.yml
-
-# -----------------------------------------------------------------------------
-# Python
-# -----------------------------------------------------------------------------
-
-# Byte-compiled / optimized / DLL files
+# 3. THE GARBAGE (Python / JS / Compiled Junk)
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
 venv/
-ENV/
-env.bak/
-venv.bak/
+.venv/
+node_modules/
+dist/
+build/
+*.exe
+*.so
+*.dll
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# -----------------------------------------------------------------------------
-# IDE and Editor Files
-# -----------------------------------------------------------------------------
-
-# JetBrains IDEs
+# 4. THE SHADOWS (IDE & OS Metadata)
 .idea/
-*.iml
-*.ipr
-*.iws
-
-# VS Code
 .vscode/
-*.code-workspace
-
-# Vim
 *.swp
-*.swo
-*~
-.netrwhist
-
-# Emacs
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# Atom
-.atom/
-
-# NuGet
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# macOS
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Windows
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-@eaDir/
+desktop.ini
 
-# -----------------------------------------------------------------------------
-# Application Data - Generated at Runtime
-# -----------------------------------------------------------------------------
-
-# Green Mold Cure application data
-.green_mold_cure/
-quarantine/
-logs/
-*.db
-*.db-journal
-*.sqlite
-*.sqlite3
-
-# Scan reports (may contain sensitive file paths)
-scan_reports/
-*.report
-*_report.txt
-
-# AI model cache (if using local caching)
-models_cache/
-.ai_cache/
-
-# -----------------------------------------------------------------------------
-# Temporary Files
-# -----------------------------------------------------------------------------
-
-# General temp files
-*.tmp
-*.temp
-*.bak
-*.backup
-*.old
-tmp/
-temp/
-.cache/
-
-# Archive files that may contain scanned content
-*.zip.bak
-*.tar.bak
-
-# -----------------------------------------------------------------------------
-# Test Files
-# -----------------------------------------------------------------------------
-
-# Test fixtures with sample malware (DO NOT COMMIT REAL MALWARE)
-test_samples/
-test_malware/
-*.virus
-*.malware
-test_*_samples/
-
-# Test databases
-test_*.db
-test_*.sqlite
-
-# -----------------------------------------------------------------------------
-# Documentation Build
-# -----------------------------------------------------------------------------
-
-# Sphinx
-docs/_build/
-docs/.doctrees/
-
-# mkdocs
-site/
-
-# -----------------------------------------------------------------------------
-# CI/CD
-# -----------------------------------------------------------------------------
-
-# GitHub Actions
-.github/workflows/debug.yml
-.github/workflows/test-local.yml
-
-# -----------------------------------------------------------------------------
-# Release Archives (Keep source only)
-# -----------------------------------------------------------------------------
-
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.zip
-*.7z
-*.rar
-
-# -----------------------------------------------------------------------------
-# Debug Files
-# -----------------------------------------------------------------------------
-
+# 5. LOGS
 *.log
-logs/
-*.trace
-*.dump
-
-# -----------------------------------------------------------------------------
-# OS-Specific
-# -----------------------------------------------------------------------------
-
-# Linux
-*~
-.fuse_hidden*
-.Trash-*
-.nfs*
-
-# Windows
-[Ww]indows[Tt]iler.log
-$RECYCLE.BIN/
-System Volume Information/
-
-# macOS
-.DS_Store
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-
-# -----------------------------------------------------------------------------
-# Notes:
-# - This .gitignore is designed for security-focused projects
-# - When in doubt, exclude the file
-# - Review before committing: git status
-# - Use git ls-files to see what's tracked
-# -----------------------------------------------------------------------------
