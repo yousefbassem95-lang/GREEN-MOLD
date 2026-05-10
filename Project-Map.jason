@@ -26,10 +26,10 @@
   },
   "core_files": [
     "run.py",
-    "README.md",
+    "Readme.md",
     "requirements.txt",
     "PLAN.md",
-    "Global_Rules.md",
+    "Global_rules.md",
     "ICON.txt",
     "system_Constraints.md"
   ]
