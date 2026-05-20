@@ -70,7 +70,7 @@ class Settings:
         "meta": {
             "created_at": None,
             "updated_at": None,
-            "version": "1.0.0",
+            "version": "4.0.1",
         },
     }
     

@@ -1,6 +1,6 @@
 {
   "project_name": "Green Mold Cure",
-  "version": "1.0.0",
+  "version": "4.0.1",
   "architect": "Yousef Bassem (JUPITER)",
   "description": "Cross-platform CLI antivirus tool with Local AI Threat Correlation",
   "directory_structure": {

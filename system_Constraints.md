@@ -175,7 +175,7 @@ Required for:
 
 | Green Mold Cure | Min Python | Max Python | Notes |
 |-----------------|------------|------------|-------|
-| 1.0.0 | 3.10 | 3.13 | Initial release |
+| 4.0.1 | 3.10 | 3.13 | Initial release |
 
 ## Future Considerations
 

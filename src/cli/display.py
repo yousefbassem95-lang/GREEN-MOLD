@@ -55,7 +55,7 @@ class GMCConsole:
             # Fallback text header if icon not available
             header = Panel(
                 Text("🦠 GREEN MOLD CURE 🦠", style=Style(color=BRIGHT_GREEN, bold=True)),
-                subtitle="Antivirus Scanner v1.0.0",
+                subtitle="Antivirus Scanner v4.0.1",
                 border_style=MEDIUM_GREEN,
                 padding=(1, 2),
             )

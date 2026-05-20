@@ -287,4 +287,4 @@ Ensure `.env` is in your `.gitignore`:
 ---
 
 **Last Updated:** February 17, 2026  
-**Version:** 1.0.0
+**Version:** 4.0.1
