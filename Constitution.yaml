@@ -1,0 +1,109 @@
+# Green Mold Cure - Project Constitution
+# Defines core principles, values, and governing rules
+
+project:
+  name: "Green Mold Cure"
+  version: "4.0.1"
+  purpose: "Provide accessible, effective antivirus protection via CLI"
+
+core_values:
+  - name: "Security First"
+    description: "All operations prioritize system and user security"
+    rules:
+      - "Never hardcode credentials"
+      - "Always validate user input"
+      - "Encrypt sensitive data"
+      - "Log all security-relevant actions"
+
+  - name: "User Control"
+    description: "Users maintain full control over threat handling"
+    rules:
+      - "Prompt before any destructive action"
+      - "Provide clear explanations of threats"
+      - "Allow reversal of actions where possible"
+      - "Maintain audit trail"
+
+  - name: "Transparency"
+    description: "Operations are observable and understandable"
+    rules:
+      - "Clear progress indicators"
+      - "Detailed scan reports"
+      - "Accessible logs"
+      - "No hidden operations"
+
+  - name: "Cross-Platform"
+    description: "Accessible on all major operating systems"
+    rules:
+      - "Test on Linux, Windows, macOS"
+      - "Document mobile workarounds"
+      - "Handle OS differences gracefully"
+      - "Use platform-appropriate paths"
+
+  - name: "Maintainability"
+    description: "Code is clean, documented, and extensible"
+    rules:
+      - "Follow DRY principle"
+      - "Write self-documenting code"
+      - "Comment complex logic"
+      - "Maintain test coverage"
+
+governance:
+  decision_making:
+    - "User requirements take priority"
+    - "Security concerns override convenience"
+    - "Ambiguity requires clarification before action"
+
+  change_control:
+    - "All changes logged with intent and impact"
+    - "Backward compatibility maintained unless approved"
+    - "Rollback strategy required for non-trivial changes"
+
+  quality_assurance:
+    - "Tests before and after major changes"
+    - "Minimum viable test coverage: 70%"
+    - "Deterministic, behavior-focused tests"
+
+technical_principles:
+  architecture:
+    - "Single Responsibility per module"
+    - "Open/Closed for extension"
+    - "Dependency Injection for testability"
+    - "Clear separation of concerns"
+
+  coding_standards:
+    - "PEP 8 compliance"
+    - "Type hints for public APIs"
+    - "Docstrings for public functions"
+    - "Consistent naming conventions"
+
+  error_handling:
+    - "Fail safely and informatively"
+    - "Never expose stack traces to users"
+    - "Log errors with context"
+    - "Provide recovery options"
+
+  data_handling:
+    - "Minimize data collection"
+    - "Define retention policies"
+    - "Secure deletion when purging"
+    - "User owns all data"
+
+ui_ux_principles:
+  - "Dark green color scheme throughout"
+  - "Icon displayed at top of interface"
+  - "Numbered menu for all interactions"
+  - "Clear, jargon-free explanations"
+  - "Progress indicators for long operations"
+  - "Accessible help and documentation"
+
+compliance:
+  - "Respect API terms of service"
+  - "No unauthorized system access"
+  - "User privacy paramount"
+  - "Educational and protective use only"
+
+version_history:
+  - version: "1.0"
+    date: "2026-02-17"
+    changes:
+      - "Initial constitution created"

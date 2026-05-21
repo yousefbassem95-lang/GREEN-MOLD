@@ -1,0 +1,36 @@
+{
+  "project_name": "Green Mold Cure",
+  "version": "4.0.1",
+  "architect": "Yousef Bassem (JUPITER)",
+  "description": "Cross-platform CLI antivirus tool with Local AI Threat Correlation",
+  "directory_structure": {
+    "src/": {
+      "description": "Source code for the application",
+      "subdirectories": {
+        "cli/": "User interface components (Rich UI)",
+        "config/": "Configuration and settings management",
+        "database/": "Threat intelligence sources and database management",
+        "quarantine/": "Encrypted file isolation and management",
+        "scanner/": "Core detection engines (Signature, YARA, Heuristic, PE)",
+        "utils/": "Helper functions for platform, crypto, and logging"
+      },
+      "files": {
+        "main.py": "Application entry point",
+        "ai_threat_correlator.py": "AI-powered threat analysis logic"
+      }
+    },
+    "assets/": "Branding assets and images",
+    "scripts/": "Installation and setup scripts for various platforms",
+    "tests/": "Test suite covering scanners, database, and CLI",
+    "templates/": "Git hooks and other templates"
+  },
+  "core_files": [
+    "run.py",
+    "Readme.md",
+    "requirements.txt",
+    "PLAN.md",
+    "Global_rules.md",
+    "ICON.txt",
+    "system_Constraints.md"
+  ]
+}

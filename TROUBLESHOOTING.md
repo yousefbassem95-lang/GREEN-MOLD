@@ -445,4 +445,4 @@ rm -rf ~/.green_mold_cure     # Linux/macOS (deletes all data)
 ---
 
 **Last Updated:** February 17, 2026  
-**Version:** 1.0.0
+**Version:** 4.0.1
