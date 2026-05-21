@@ -37,6 +37,10 @@ from database.updater import db_updater
 from quarantine.manager import quarantine_manager
 from config.settings import settings
 from utils.platform import platform_info
+from utils.integrity import integrity_monitor
+import subprocess
+import os
+import psutil
 from utils.logger import logger
 
 
@@ -48,6 +52,7 @@ class GreenMoldCureUltimate:
         self.menu_handler = MenuHandler()
         self.running = True
         self.console = ui_console.console
+        self.setup_self_defense()
         
         # Ensure directories exist
         platform_info.ensure_directories()
@@ -60,6 +65,43 @@ class GreenMoldCureUltimate:
         
         logger.info("Green Mold Cure Ultimate Edition initialized")
     
+
+    def setup_self_defense(self):
+        """Initialize integrity monitor and sentinel process."""
+        # Check integrity first
+        if not integrity_monitor.load_baseline():
+            integrity_monitor.create_baseline()
+
+        if not integrity_monitor.check_integrity():
+            self.console.print("[red][bold]ALERT: System integrity breach detected! Auto-recovery initiated.[/bold][/red]")
+
+        # Start real-time integrity monitoring
+        integrity_monitor.start_monitoring()
+
+        # Start sentinel process
+        self.start_sentinel()
+
+    def start_sentinel(self):
+        """Starts the sentinel process to monitor this main process."""
+        sentinel_script = Path(__file__).parent / "utils" / "sentinel.py"
+        try:
+            # Check if sentinel is already running
+            sentinel_pid_file = platform_info.get_app_data_dir() / "sentinel.pid"
+            if sentinel_pid_file.exists():
+                with open(sentinel_pid_file, "r") as f:
+                    try:
+                        old_pid = int(f.read().strip())
+                        if psutil.pid_exists(old_pid):
+                            logger.info(f"Sentinel already running with PID {old_pid}")
+                            return
+                    except ValueError:
+                        pass
+
+            subprocess.Popen([sys.executable, str(sentinel_script), str(os.getpid())],
+                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            logger.info("Sentinel process started.")
+        except Exception as e:
+            logger.error(f"Failed to start sentinel: {e}")
     def display_header(self) -> None:
         """Display the application header with icon and status."""
         self.console.clear()
